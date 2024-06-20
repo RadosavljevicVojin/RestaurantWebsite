@@ -487,3 +487,13 @@
     top: 0;
     position: absolute;
 }
+.video-container {
+    height: 200px; /* Fiksiraj visinu kolone */
+    overflow: hidden;
+}
+
+.video-container video {
+    height: 100%;
+    width: auto; /* Podesi širinu na automatsko prilagođavanje */
+    object-fit: cover;
+}
