@@ -85,7 +85,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item" aria-current="page"><a href="#">Moj nalog</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Moja korpa</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Lista narudzbina</li>
                         </ol>
                     </nav>
                 </div>
@@ -96,38 +96,16 @@
 
         <!-- Cart Items and Order History Start -->
         <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h2 class="mb-4">Korpa sa jelima</h2>
-                        <div >
-                            <div class="card mb-3">
-                                <div class="card-header">
-                                    Korpa sa jelima
-                                </div>
-                                <div class="card-body">
-                                    <ul id = "lista" class="list-group list-group-flush">
-                                        
-                                    </ul>
-                                </div>
-                                <div class="card-footer text-end">
-                                    <button class="btn btn-sm btn-outline-primary">Pogledaj detalje</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <h3 class="mb-4">Detalji narudžbine</h3>
-                        <div id="order-details">
-                            <!-- Ovde se prikazuju detalji narudžbine, kao što su ukupna cena, opcije plaćanja, itd. -->
-                        </div>
-                        <button id = "finalize" class="btn btn-success btn-lg mt-4">Finalizuj narudžbinu</button>
-                    </div>
+            <!-- Horizontalna linija za razdvajanje korpe i liste porudžbina -->
+            <hr class="my-5">
+
+            <div class="container mt-5">
+                <h2 class="mb-4">Lista narudžbina</h2>
+                <div id="order-history">
+                    <!-- Ovde se prikazuju sve prethodne narudžbine korisnika -->
+                    
                 </div>
             </div>
-
-            <!-- Horizontalna linija za razdvajanje korpe i liste porudžbina -->
-         
         </div>
         <!-- Cart Items and Order History End -->
         
@@ -159,7 +137,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src = "js/narudzbina.js"></script>
+    <script src = "js/listaNarudzbina.js"></script>
 </body>
 
 </html>

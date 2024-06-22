@@ -1,7 +1,8 @@
 $(document).ready(function() {
     // Provera da li postoji ulaz za jela u localStorage
-    
+
     let jela = localStorage.getItem('jela');
+     
     let nizJela = []
     if (!jela) {
         console.log("aaaaa")

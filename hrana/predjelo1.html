@@ -105,11 +105,16 @@
                                 <div class="col-lg-6 d-flex flex-column justify-content-center">
                                     <div class="d-flex justify-content-between align-items-center mb-2">
                                         <span class="text-primary">Cena:</span>
-                                        <span>$25 | $35</span>
+                                        <div>
+                                            <input type="radio" id="cena25" name="cena" value="25">
+                                            <label for="cena25">$25</label>
+                                            <input type="radio" id="cena35" name="cena" value="35">
+                                            <label for="cena35">$35</label>
+                                        </div>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center mb-2">
                                         <span class="text-primary">Opis:</span>
-                                        <span>Ukusne palačinke sa pačijim grudima </span>
+                                        <span id = "ime">Ukusne palačinke sa pačijim grudima </span>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center mb-2">
                                         <span class="text-primary">Prosecna ocena:</span>
@@ -127,7 +132,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center mb-2">
                                         <button id = "oceniBtn" class="btn btn-primary">Oceni</button>
-                                        <button class="btn btn-success">Dodaj u korpu</button>
+                                        <button id = "dodajBtn" class="btn btn-success">Dodaj u korpu</button>
                                     </div>
                                 </div>
                             </div>

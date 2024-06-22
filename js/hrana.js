@@ -42,3 +42,72 @@ document.getElementById('oceniBtn').addEventListener('click', function() {
         alert('Uspešno ste ocenili jelo!');
     }
 });
+document.getElementById("dodajBtn").addEventListener("click", function() {
+    let cenaButtons = document.getElementsByName("cena");
+    let cenaSelected = false;
+    let val;
+    let velicina;
+    for (let i = 0; i < cenaButtons.length; i++) {
+        if (cenaButtons[i].checked) {
+            cenaSelected = true;
+            val = cenaButtons[i].value;
+            if(i == 0){
+                velicina = "mala";
+            }else{
+                velicina = "velika";
+            }
+            break;
+        }
+    }
+
+    if (!cenaSelected) {
+        alert("Morate izabrati cenu pre dodavanja u korpu!");
+        return;
+    }
+    let korpa = localStorage.getItem('korpa');
+    let vrednost = localStorage.getItem('vrednost')
+    if(vrednost){
+      vrednost = parseInt(vrednost);
+    }else{
+        vrednost = 0;
+    }
+    let lista = []
+    if(korpa){
+        lista = JSON.parse(korpa); 
+        let flag = true;
+        for(let i = 0;i < lista.length;i++){
+            if(lista[i].jelo ==document.getElementById('ime').textContent && lista[i].porcija == velicina){
+                flag = false;
+                lista[i].kolicina +=1
+                break;
+            }
+        }
+        if(flag){
+            lista.push(
+                {
+                    jelo:document.getElementById('ime').textContent,
+                    kolicina:1,
+                    porcija:velicina,
+                    cena:val
+                }
+            );
+        }
+
+    }else{
+        lista.push(
+            {
+                jelo:document.getElementById('ime').textContent,
+                kolicina:1,
+                porcija:velicina,
+                cena:val
+            }
+        );
+    }
+    localStorage.setItem('korpa', JSON.stringify(lista));
+    vrednost += parseInt(val);
+    localStorage.setItem('vrednost', vrednost);
+
+
+    // Ovde dodajte logiku za dodavanje u korpu
+    alert("Uspesno ste dodali u korpu!");
+});
