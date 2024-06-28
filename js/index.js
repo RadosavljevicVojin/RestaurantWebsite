@@ -15,7 +15,9 @@ $(document).ready(function() {
                 opis: 'Pohovani hrskavi kraljevski gambori, prženi sa solju i biberom.',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 55,
+                cenavelika: 75
             },
             {
                 id:2,
@@ -24,7 +26,9 @@ $(document).ready(function() {
                 opis: 'Pržene mekane krabe iz Jadranskog mora',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 55,
+                cenavelika: 75
             },
             {
                 id:3,
@@ -33,34 +37,42 @@ $(document).ready(function() {
                 opis: 'Prženi svinjski kotleti umočeni u naš specijalni sos',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 65,
+                cenavelika: 85
             },
             {
                 id:4,
                 ime: 'Palačinke sa prženim prsima od patke',
                 slika: 'img/kinezi_predjelo_1.png',
-                opis: '',
+                opis: 'Palacinke sa prženim prsima od patke, uz prilog dobijate nase zacine',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 25,
+                cenavelika: 35
             },
             {
                 id:5,
                 ime: 'Palačinke sa jagnjetinom',
                 slika: 'img/kinezi_predjelo_2.png',
-                opis: '',
+                opis: 'Palacinke sa jagnjetinom, uz prilog dobijate nase zacine',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 25,
+                cenavelika: 35
             },
             {
                 id:6,
                 ime: 'Satai piletina na ražnju',
                 slika: 'img/kinezi_predjelo_3.png',
-                opis: '',
+                opis: 'Piletina na kineski nacin',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 30,
+                cenavelika: 40
             },
             {
                 id:7,
@@ -69,7 +81,9 @@ $(document).ready(function() {
                 opis: 'Pohovani sladoled sa prelivom od čokolade i prahom od pistaća',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 25,
+                cenavelika: 35
             },
             {
                 id:8,
@@ -78,7 +92,9 @@ $(document).ready(function() {
                 opis: 'Pržene rolnice sa bananom i kremom',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 20,
+                cenavelika: 30
             },
             {
                 id:9,
@@ -87,7 +103,9 @@ $(document).ready(function() {
                 opis: 'Sočan mus od čokolade',
                 sumaOcena: 0,
                 brojOcena: 0,
-                prosecnaOcena: 0
+                prosecnaOcena: 0,
+                cenamala: 20,
+                cenavelika: 30
             }
         ];
         

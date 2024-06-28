@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Restoran - Jelo Pregled</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="index.html" class="nav-item nav-link">Pocetna</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Galerija</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="videoGalerija.html" class="dropdown-item">Video galerija</a>
+                                <a href="galerija.html" class="dropdown-item">Galerija slika</a>
+                        
+                            </div>
+                        </div>
+                        <a href="menu_jela.html" class="nav-item nav-link active">Jelovnik</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Moj nalog</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="service.html" class="dropdown-item">Moja korpa</a>
+                                <a href="narudzbine.html" class="dropdown-item">Moje narudzbine</a>
+                        
+                            </div>
+                        </div>
+                        <a href="about.html" class="nav-item nav-link">O nama</a>
+                       
+                </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Jelovnik</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Jelovnik</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Jelo</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+       <!-- Jelo Pregled Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <img id="jeloSlika" class="img-fluid rounded" src="" alt="Slika jela">
+                    </div>
+                    
+
+
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary">Ime:</span>
+                            <p id="jeloIme"></p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary">Cena:</span>
+                            <div>
+                                <input type="radio" id="cenam" name="cena">
+                                <span id="cenama">  </span>
+                                <input type="radio" id="cenav" name="cena" >
+                                <span id="cenave"></span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary">Opis:</span>
+                            <p id="jeloOpis"></p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-primary">Prosecna ocena:</span>
+                            <p><span id="jeloOcena"></span></p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <!-- Dodati HTML za ocenjivanje zvezdicama ovde -->
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="1" /><label for="star5" title="1 stars">1</label>
+                                <input type="radio" id="star4" name="rating" value="2" /><label for="star4" title="2 stars">2</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">3</label>
+                                <input type="radio" id="star2" name="rating" value="4" /><label for="star2" title="4 stars">4</label>
+                                <input type="radio" id="star1" name="rating" value="5" /><label for="star1" title="5 star">5</label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <button id = "oceniBtn" class="btn btn-primary">Oceni</button>
+                            <button id = "dodajBtn" class="btn btn-success">Dodaj u korpu</button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <input type="hidden" id="hidden">
+        <!-- Jelo Pregled End -->
+
+        <!-- Footer Start -->
+        <footer class="bg-dark text-white text-center py-4">
+            <div class="container">
+            <p class="mb-0">&copy; 2024, Војин Радосављевић и Вук Глигорић, Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду</p>
+            </div>
+        </footer>
+    <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    </div>
+    <!-- Template Javascript -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Vaši skripte -->
+
+    <script src = "js/hrana.js"></script>
+    <script src = "js/main.js"></script>
+    <script src = "js/ucitavanjeJela.js"></script>
+
+    
+</body>
+</html>

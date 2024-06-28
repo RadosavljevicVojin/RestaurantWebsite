@@ -16,16 +16,14 @@ document.getElementById('oceniBtn').addEventListener('click', function() {
 
     // Dohvati jela iz localStorage
     let jela = localStorage.getItem('jela');
-
+    
     if (jela) {
         let nizJela = JSON.parse(jela);
-        console.log(nizJela.length);
-        console.log(id.value);
-        console.log("idijevi");
+        
         for(let i = 0;i < nizJela.length;i++){
-            console.log(nizJela[i].id);
+            
             if(nizJela[i].id == id.value){
-                console.log("usaooo");
+                
                 nizJela[i].brojOcena += 1;
                 nizJela[i].sumaOcena += ocena;
                 nizJela[i].prosecnaOcena = nizJela[i].sumaOcena * 1.0 /nizJela[i].brojOcena;
@@ -76,7 +74,7 @@ document.getElementById("dodajBtn").addEventListener("click", function() {
         lista = JSON.parse(korpa); 
         let flag = true;
         for(let i = 0;i < lista.length;i++){
-            if(lista[i].jelo ==document.getElementById('ime').textContent && lista[i].porcija == velicina){
+            if(lista[i].jelo ==document.getElementById('jeloIme').textContent && lista[i].porcija == velicina){
                 flag = false;
                 lista[i].kolicina +=1
                 break;
@@ -85,7 +83,7 @@ document.getElementById("dodajBtn").addEventListener("click", function() {
         if(flag){
             lista.push(
                 {
-                    jelo:document.getElementById('ime').textContent,
+                    jelo:document.getElementById('jeloIme').textContent,
                     kolicina:1,
                     porcija:velicina,
                     cena:val
@@ -96,7 +94,7 @@ document.getElementById("dodajBtn").addEventListener("click", function() {
     }else{
         lista.push(
             {
-                jelo:document.getElementById('ime').textContent,
+                jelo:document.getElementById('jeloIme').textContent,
                 kolicina:1,
                 porcija:velicina,
                 cena:val
