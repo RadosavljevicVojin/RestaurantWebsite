@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -50,7 +50,13 @@
                             </div>
                         </div>
                         <a href="about.html" class="nav-item nav-link">O nama</a>
-                       
+                        <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jezik</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="../eng/jeloPregledEng.html" class="dropdown-item" id = "engleski">Engleski</a>
+                            <a href="#" class="dropdown-item" id = "srpski">Srpski</a>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </nav>
@@ -83,6 +89,7 @@
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="text-primary">Ime:</span>
                             <p id="jeloIme"></p>
+                            <p hidden id = "broj"></p>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="text-primary">Cena:</span>
@@ -145,9 +152,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Vaši skripte -->
 
-    <script src = "js/hrana.js"></script>
-    <script src = "js/main.js"></script>
-    <script src = "js/ucitavanjeJela.js"></script>
+    <script src = "../js/hrana.js"></script>
+    <script src = "../js/main.js"></script>
+    <script src = "../js/ucitavanjeJela.js"></script>
+    <script src="../js/promeniJezik.js"></script>
 
     
 </body>

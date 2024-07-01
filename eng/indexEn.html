@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>Restaurant - Bootstrap Restaurant Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,15 +21,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     
 </head>
 
@@ -48,7 +48,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
+                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restaurant</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -56,27 +56,32 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Pocetna</a>
+                        <a href="indexEn.html" class="nav-item nav-link active">Home</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Galerija</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
                             <div class="dropdown-menu m-0">
-                                <a href="videoGalerija.html" class="dropdown-item">Video galerija</a>
-                                <a href="galerija.html" class="dropdown-item">Galerija slika</a>
-                        
+                                <a href="videoGalleryEng.html" class="dropdown-item">Video Gallery</a>
+                                <a href="galleryEng.html" class="dropdown-item">Image Gallery</a>
                             </div>
                         </div>
-                        <a href="menu_jela.html" class="nav-item nav-link">Jelovnik</a>
+                        <a href="menu_jelaEng.html" class="nav-item nav-link">Menu</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Moj nalog</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My Account</a>
                             <div class="dropdown-menu m-0">
-                                <a href="service.html" class="dropdown-item">Moja korpa</a>
-                                <a href="narudzbine.html" class="dropdown-item">Moje narudzbine</a>
-                        
+                                <a href="KorpaEng.html" class="dropdown-item">My Cart</a>
+                                <a href="narudzbineEng.html" class="dropdown-item">My Orders</a>
                             </div>
                         </div>
-                        <a href="about.html" class="nav-item nav-link">O nama</a>
-                       
-                </div>
+                        <a href="aboutEng.html" class="nav-item nav-link">About Us</a>
+                    </div>
+                    <!-- Adding language dropdown menu -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Language</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="indexEn.html" class="dropdown-item" id = "engleski">English</a>
+                            <a href="../srp/index.html" class="dropdown-item" id = "srpski">Serbian</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
       
@@ -85,7 +90,7 @@
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="img/hero.png" alt="">
+                            <img class="img-fluid" src="../img/hero.png" alt="">
                         </div>
                         <div class="col-lg-6">
                             <div class="row">
@@ -165,31 +170,31 @@
         <!-- Footer Start -->
         <footer class="bg-dark text-white text-center py-4">
             <div class="container">
-                <p class="mb-0">&copy; 2024, Војин Радосављевић и Вук Глигорић, Одсек за софтверско инжењерство Електротехничког факултета Универзитета у Београду</p>
+                <p class="mb-0">&copy; 2024, Vojin Radosavljević and Vuk Gligorić, Department of Software Engineering, Faculty of Electrical Engineering, University of Belgrade</p>
             </div>
         </footer>
-        <!-- Footer End -->
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/index.js"></script>
-</body>
-
-</html>
+         <!-- Back to Top -->
+         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        </div>
+    
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/wow/wow.min.js"></script>
+        <script src="../lib/easing/easing.min.js"></script>
+        <script src="../lib/waypoints/waypoints.min.js"></script>
+        <script src="../lib/counterup/counterup.min.js"></script>
+        <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="../lib/tempusdominus/js/moment.min.js"></script>
+        <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    
+    
+        <!-- Template Javascript -->
+        <script src="../js/main.js"></script>
+        <script src="../js/index.js"></script>
+        <script src="../js/promeniJezik.js"></script>
+    </body>
+    
+    </html>

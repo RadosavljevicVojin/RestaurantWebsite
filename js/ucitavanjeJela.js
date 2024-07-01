@@ -15,7 +15,14 @@ $(document).ready(function() {
     const jeloId = params.id;
 
     if (jeloId) {
-        const jela = JSON.parse(localStorage.getItem('jela'));
+        let jela = []
+        let jela2 = []
+        if(localStorage.getItem('jezik') == 'srp'){
+            jela = JSON.parse(localStorage.getItem('jela'));
+            jela2 = JSON.parse(localStorage.getItem('jela'))
+        }else{
+            jela = JSON.parse(localStorage.getItem('jela2'));
+        }
         const jelo = jela.find(item => item.id == jeloId);
         
    
@@ -28,7 +35,8 @@ $(document).ready(function() {
             $('#jeloIme').text(jelo.ime);
             $('#jeloOpis').text(jelo.opis);
             $('#jeloOcena').text(jelo.prosecnaOcena);
-
+            localStorage.setItem('jeloId',jeloId);
+            //$('#jeloIme2').text
             $('#cenam').val(mala); // Postavljamo vrednost za cenamala
             $('#cenama').text('$' + mala); // Ispisujemo tekst sa cenom za cenamala
 

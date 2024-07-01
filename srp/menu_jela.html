@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Menu</title>
+    <title>Restaurant - Bootstrap Restaurant Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,17 +21,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
-
+<style>
+    
+</style>
 <body>
     <div class="container-xxl bg-white p-0">
          <!-- Spinner Start -->
@@ -75,7 +77,13 @@
 
                         </div>
                         <a href="about.html" class="nav-item nav-link">O nama</a>
-                       
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jezik</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="../eng/menu_jelaEng.html" class="dropdown-item" id = "engleski">Engleski</a>
+                                <a href="#" class="dropdown-item" id = "srpski">Srpski</a>
+                            </div>
+                        </div>
                 </div>
                 </div>
             </nav>
@@ -99,17 +107,38 @@
         <!-- Menu Start -->
         <div class="container-xxl py-5">
             <div class="container">
+                <!-- Sekcija za pretraživanje i sortiranje -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <!-- Pretraživačko polje -->
+                    <div class="d-flex align-items-center">
+                        <input type="text" id="searchInput" class="form-control me-3" placeholder="Search...">
+                        <button id="searchButton" class="btn btn-primary">Search</button>
+                    </div>
+                    <!-- Dugme za sortiranje -->
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#" id = "naziv">Po nazivu</a></li>
+                            <li><a class="dropdown-item" href="#" id = "cena">Po ceni</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Naslov sekcije -->
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title text-center text-primary fw-normal">Meni   </h5>
+                    <h5 class="section-title text-center text-primary fw-normal">Meni</h5>
                     <h1 class="mb-5">Isprobajte nove ukuse!</h1>
                 </div>
+                
+                <!-- Meni sa karticama -->
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3"  href="menu_predjela.html">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3" href="menu_predjela.html">
                                 <i class="fa fa-coffee fa-2x text-primary"></i>
                                 <div class="ps-3">
-                                    
                                     <h6 class="mt-n1 mb-0">Predjela</h6>
                                 </div>
                             </a>
@@ -118,75 +147,31 @@
                             <a class="d-flex align-items-center text-start mx-3 pb-3 active" href="menu_jela.html">
                                 <i class="fa fa-hamburger fa-2x text-primary"></i>
                                 <div class="ps-3">
-                                    
                                     <h6 class="mt-n1 mb-0">Glavna jela</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3"  href="menu_slatko.html">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" href="menu_slatko.html">
                                 <i class="fa fa-utensils fa-2x text-primary"></i>
                                 <div class="ps-3">
-                                    
                                     <h6 class="mt-n1 mb-0">Dezerti</h6>
                                 </div>
                             </a>
                         </li>
                     </ul>
                     <div class="tab-content">
-                        
                         <div class="tab-pane fade show p-0 active">
                             <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <a href="jeloPregled.html?id=1">
-                                        <div class="d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="img/kinezi_jelo_1.png" alt="" style="width: 80px;">
-                                            <div class="w-100 d-flex flex-column text-start ps-4">
-                                                <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                    <span>Pohovani kraljevski gambori</span>
-                                                    <span class="text-primary">$55 | $75</span>
-                                                </h5>
-                                                <small class="fst-italic">Pohovani hrskavi kraljevski gambori, prženi sa solju i biberom.</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6">
-                                    <a href="jeloPregled.html?id=2">
-                                        <div class="d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="img/kinezi_jelo_2.png" alt="" style="width: 80px;">
-                                            <div class="w-100 d-flex flex-column text-start ps-4">
-                                                <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                    <span>Przene mekane krabe</span>
-                                                    <span class="text-primary">$55 | $75</span>
-                                                </h5>
-                                                <small class="fst-italic">Przene mekane krabe iz Jadranskog mora</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6">
-                                    <a href="jeloPregled.html?id=3">
-                                        <div class="d-flex align-items-center">
-                                            <img class="flex-shrink-0 img-fluid rounded" src="img/kinezi_jelo_3.png" alt="" style="width: 80px;">
-                                            <div class="w-100 d-flex flex-column text-start ps-4">
-                                                <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                    <span>Przeni svinjski kotleti</span>
-                                                    <span class="text-primary">$65 | $85</span>
-                                                </h5>
-                                                <small class="fst-italic">Przeni svinjski kotleti umočeni u naš specijalni sos</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                
+                                <!-- Dinamički sadržaj će biti umetnut ovde -->
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
+        
+        
         <!-- Menu End -->
         
 
@@ -205,18 +190,20 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../lib/wow/wow.min.js"></script>
+        <script src="../lib/easing/easing.min.js"></script>
+        <script src="../lib/waypoints/waypoints.min.js"></script>
+        <script src="../lib/counterup/counterup.min.js"></script>
+        <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="../lib/tempusdominus/js/moment.min.js"></script>
+        <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/promeniJezik.js"></script>
+    <script src="../js/ucitajGlavnaJela.js"></script>
 </body>
 
 </html>
