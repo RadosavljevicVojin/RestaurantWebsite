@@ -23,6 +23,7 @@ $(document).ready(function() {
                 sumaOcena: 0,
                 brojOcena: 0,
                 prosecnaOcena: 0,
+                tip:'glavno',
                 cenamala: 55,
                 cenavelika: 75
             },
@@ -33,6 +34,7 @@ $(document).ready(function() {
                 opis: 'Pržene mekane krabe iz Jadranskog mora',
                 sumaOcena: 0,
                 brojOcena: 0,
+                tip:'glavno',
                 prosecnaOcena: 0,
                 cenamala: 55,
                 cenavelika: 75
@@ -45,6 +47,7 @@ $(document).ready(function() {
                 sumaOcena: 0,
                 brojOcena: 0,
                 prosecnaOcena: 0,
+                tip:'glavno',
                 cenamala: 65,
                 cenavelika: 85
             },
@@ -55,6 +58,7 @@ $(document).ready(function() {
                 opis: 'Palacinke sa prženim prsima od patke, uz prilog dobijate nase zacine',
                 sumaOcena: 0,
                 brojOcena: 0,
+                tip:'pred',
                 prosecnaOcena: 0,
                 cenamala: 25,
                 cenavelika: 35
@@ -65,6 +69,7 @@ $(document).ready(function() {
                 slika: '../img/kinezi_predjelo_2.png',
                 opis: 'Palacinke sa jagnjetinom, uz prilog dobijate nase zacine',
                 sumaOcena: 0,
+                tip:'pred',
                 brojOcena: 0,
                 prosecnaOcena: 0,
                 cenamala: 25,
@@ -76,6 +81,7 @@ $(document).ready(function() {
                 slika: '../img/kinezi_predjelo_3.png',
                 opis: 'Piletina na kineski nacin',
                 sumaOcena: 0,
+                tip:'pred',
                 brojOcena: 0,
                 prosecnaOcena: 0,
                 cenamala: 30,
@@ -88,6 +94,7 @@ $(document).ready(function() {
                 opis: 'Pohovani sladoled sa prelivom od čokolade i prahom od pistaća',
                 sumaOcena: 0,
                 brojOcena: 0,
+                tip:'slatko',
                 prosecnaOcena: 0,
                 cenamala: 25,
                 cenavelika: 35
@@ -100,6 +107,7 @@ $(document).ready(function() {
                 sumaOcena: 0,
                 brojOcena: 0,
                 prosecnaOcena: 0,
+                tip:'slatko',
                 cenamala: 20,
                 cenavelika: 30
             },
@@ -109,6 +117,7 @@ $(document).ready(function() {
                 slika: '../img/slatko_3.png',
                 opis: 'Sočan mus od čokolade',
                 sumaOcena: 0,
+                tip:'slatko',
                 brojOcena: 0,
                 prosecnaOcena: 0,
                 cenamala: 20,
@@ -122,6 +131,7 @@ $(document).ready(function() {
                 slika: '../img/kinezi_jelo_1.png',
                 opis: 'Fried crispy royal shrimps, fried with salt and pepper.',
                 sumaOcena: 0,
+                tip:'glavno',
                 brojOcena: 0,
                 prosecnaOcena: 0,
                 cenamala: 55,
@@ -133,6 +143,7 @@ $(document).ready(function() {
                 slika: '../img/kinezi_jelo_2.png',
                 opis: 'Fried soft crabs from the Adriatic Sea.',
                 sumaOcena: 0,
+                tip:'glavno',
                 brojOcena: 0,
                 prosecnaOcena: 0,
                 cenamala: 55,
@@ -145,6 +156,7 @@ $(document).ready(function() {
                 opis: 'Fried pork chops dipped in our special sauce.',
                 sumaOcena: 0,
                 brojOcena: 0,
+                tip:'glavno',
                 prosecnaOcena: 0,
                 cenamala: 65,
                 cenavelika: 85
@@ -155,6 +167,7 @@ $(document).ready(function() {
                 slika: '../img/kinezi_predjelo_1.png',
                 opis: 'Pancakes with fried duck breast, served with our spices.',
                 sumaOcena: 0,
+                tip:'pred',
                 brojOcena: 0,
                 prosecnaOcena: 0,
                 cenamala: 25,
@@ -167,6 +180,7 @@ $(document).ready(function() {
                 opis: 'Pancakes with lamb, served with our spices.',
                 sumaOcena: 0,
                 brojOcena: 0,
+                tip:'pred',
                 prosecnaOcena: 0,
                 cenamala: 25,
                 cenavelika: 35
@@ -178,6 +192,7 @@ $(document).ready(function() {
                 opis: 'Chicken skewers in Chinese style.',
                 sumaOcena: 0,
                 brojOcena: 0,
+                tip:'pred',
                 prosecnaOcena: 0,
                 cenamala: 30,
                 cenavelika: 40
@@ -189,6 +204,7 @@ $(document).ready(function() {
                 opis: 'Fried ice cream with chocolate topping and pistachio powder.',
                 sumaOcena: 0,
                 brojOcena: 0,
+                tip:'slatko',
                 prosecnaOcena: 0,
                 cenamala: 25,
                 cenavelika: 35
@@ -200,6 +216,7 @@ $(document).ready(function() {
                 opis: 'Fried rolls with banana and cream.',
                 sumaOcena: 0,
                 brojOcena: 0,
+                tip:'slatko',
                 prosecnaOcena: 0,
                 cenamala: 20,
                 cenavelika: 30
@@ -210,6 +227,7 @@ $(document).ready(function() {
                 slika: '../img/slatko_3.png',
                 opis: 'Delicious chocolate mousse.',
                 sumaOcena: 0,
+                tip:'slatko',
                 brojOcena: 0,
                 prosecnaOcena: 0,
                 cenamala: 20,
