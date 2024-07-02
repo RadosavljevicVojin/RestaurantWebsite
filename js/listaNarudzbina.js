@@ -22,7 +22,7 @@ if (jezik === 'srp') {
         <div class="card-body">
             <ul class="list-group list-group-flush">
                 ${order.items.map(item => `<li class="list-group-item">${item.jelo} - Količina: ${item.kolicina} - Porcija: ${item.porcija}</li>`).join('')}
-                <li class="list-group-item">Ukupna cena: ${order.vrednost} RSD</li>
+                <li class="list-group-item">Ukupna cena: ${order.vrednost} $</li>
             </ul>
         </div>
     `;
@@ -32,7 +32,7 @@ if (jezik === 'srp') {
         <div class="card-body">
             <ul class="list-group list-group-flush">
                 ${order.items.map(item => `<li class="list-group-item">${item.jelo} - Quantity: ${item.kolicina} - Portion: ${item.porcija}</li>`).join('')}
-                <li class="list-group-item">Total price: $${order.vrednost}</li>
+                <li class="list-group-item">Total price: $${order.vrednost} $</li>
             </ul>
         </div>
     `;

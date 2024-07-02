@@ -102,8 +102,12 @@ const finalizeButton = document.getElementById('finalize');
         let kolicinaElement = document.getElementById(spanId);
         let novaKolicina = parseInt(kolicinaElement.textContent) + promena;
 
+        // Dodato: Provera jezika i izbor odgovarajuće korpe
         let korpa = localStorage.getItem('korpa');
+        let korpa2 = localStorage.getItem('korpa2');
         let narudzbine = JSON.parse(korpa);
+        let narudzbine2 = JSON.parse(korpa2);
+
         let cena = localStorage.getItem('vrednost');
         cena = parseInt(cena) + promena * narudzbine[index].cena;
         localStorage.setItem('vrednost', cena);
@@ -112,18 +116,29 @@ const finalizeButton = document.getElementById('finalize');
             let stavkaZaBrisanje = kolicinaElement.parentElement.parentElement;
             lista.removeChild(stavkaZaBrisanje);
             narudzbine.splice(index, 1);
+            narudzbine2.splice(index,1);
             if(cena == 0){
                 lista.removeChild(document.getElementById('vrednost'));
                 localStorage.removeItem('korpa')
+                localStorage.removeItem('korpa2');
             }else{
                 document.getElementById('vrednost').textContent = `Ukupna cena: $${cena}`;
                 localStorage.setItem('korpa', JSON.stringify(narudzbine));
+                localStorage.setItem('korpa2', JSON.stringify(narudzbine2));
             }
+
             //obrisi iz korpee
 
         } else {
+            
             kolicinaElement.textContent = novaKolicina;
             document.getElementById('vrednost').textContent = `Ukupna cena: $${cena}`;
+            narudzbine[index].kolicina = novaKolicina
+            narudzbine2[index].kolicina = novaKolicina
+            localStorage.setItem('korpa', JSON.stringify(narudzbine));
+            localStorage.setItem('korpa2', JSON.stringify(narudzbine2));
+
+
         }
        
        

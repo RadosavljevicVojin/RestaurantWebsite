@@ -89,12 +89,18 @@ document.getElementById("dodajBtn").addEventListener("click", function() {
     var id = localStorage.getItem('jeloId');
     var ime;
     var niz = []
-    if(localStorage.getItem('srp')){
-        niz = JSON.parse(localStorage.getItem('jela'));
-    }else{
+    if(localStorage.getItem('jezik') == 'srp'){
         niz = JSON.parse(localStorage.getItem('jela2'));
+    }else{
+        niz = JSON.parse(localStorage.getItem('jela'));
     }
-    ime = niz[parseInt(id)].ime;
+    for(let i = 0;i < niz.length;i++){
+        if(niz[i].id == parseInt(id)){
+            ime = niz[i].ime;
+            break;
+        }
+    }
+    //ime = niz[parseInt(id)].ime;
     let lista = []
     let lista2 = []
     if(korpa){
@@ -105,7 +111,7 @@ document.getElementById("dodajBtn").addEventListener("click", function() {
             lista = JSON.parse(korpa2);
             lista2 = JSON.parse(korpa);
         }
-        lista = JSON.parse(korpa); 
+        
         let flag = true;
         for(let i = 0;i < lista.length;i++){
             if(lista[i].jelo == document.getElementById('jeloIme').textContent && lista[i].porcija == velicina){

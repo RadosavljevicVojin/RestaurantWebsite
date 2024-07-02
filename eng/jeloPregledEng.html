@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Jelo Pregled</title>
+    <title>Restoran - Dish review</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="img/favicon.ico" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="indexEn.html" class="nav-item nav-link active">Home</a>
+                        <a href="indexEn.html" class="nav-item nav-link">Home</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Gallery</a>
                             <div class="dropdown-menu m-0">
@@ -39,7 +39,7 @@
                                 <a href="galleryEng.html" class="dropdown-item">Image Gallery</a>
                             </div>
                         </div>
-                        <a href="menu_jelaEng.html" class="nav-item nav-link">Menu</a>
+                        <a href="menu_jelaEng.html" class="nav-item nav-link active">Menu</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">My Account</a>
                             <div class="dropdown-menu m-0">
@@ -65,7 +65,7 @@
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Menu</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Menu</a></li>
+                            <li class="breadcrumb-item"><a href="menu_jelaEng.html">Menu</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Dish</li>
                         </ol>
                     </nav>
@@ -73,6 +73,11 @@
             </div>
         </div>
         <!-- Navbar & Hero End -->
+
+         <!-- Dugme za preuzimanje jelovnika -->
+         <div class="text-center mb-4">
+            <a href="../cenovnik.pdf" class="btn btn-primary" target="_blank">Download menu</a>
+        </div>
 
        <!-- Jelo Pregled Start -->
         <div class="container-xxl py-5">
@@ -137,7 +142,22 @@
             </div>
         </footer>
     <!-- Footer End -->
-
+        <!-- Linkovi ka drugim sajtovima Start -->
+        <section class="bg-light py-4">
+            <div class="container text-center">
+                <h3>Useful links</h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-3">
+                        <a target="_blank" class="btn btn-outline-primary">Banner 1</a>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <a target="_blank" class="btn btn-outline-primary">Banner 2</a>
+                    </div>
+                    <!-- Dodaj još linkova po potrebi -->
+                </div>
+            </div>
+        </section>
+        <!-- Linkovi ka drugim sajtovima End -->
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 

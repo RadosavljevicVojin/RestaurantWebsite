@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Kreiraj HTML za prva tri jela
     var htmlContent = '';
-    for (var i = 6; i < 9 && i < nizJela.length; i++) {
+    for (var i = 0; i < 9 && i < nizJela.length; i++) {
+        if(nizJela[i].id < 7) continue;
         var jelo = nizJela[i];
         if(localStorage.getItem('jezik') == 'srp'){
             htmlContent += `
@@ -147,7 +148,11 @@ document.getElementById('searchButton').addEventListener('click', function () {
     for (let i = 0; i < niz.length; i++) {
         if (niz[i].ime.toLowerCase() === searchTerm) {
             // Preusmeravanje na stranicu sa detaljima o jelu
-            window.location.href = `jeloPregled.html?id=${niz[i].id}`;
+            if(localStorage.getItem('jezik') == 'srp'){
+                window.location.href = `jeloPregled.html?id=${niz[i].id}`;
+            }else{
+                window.location.href = `jeloPregledEng.html?id=${niz[i].id}`;
+            }
             found = true;
             break; // Prekinuti petlju ako je pronađeno
         }

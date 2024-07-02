@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Kreiraj HTML za prva tri jela
     var htmlContent = '';
-    for (var i = 0; i < 3 && i < nizJela.length; i++) {
+    for (var i = 0; i < 9 && i < nizJela.length; i++) {
+        if(nizJela[i].id > 3) continue;
         var jelo = nizJela[i];
         if(localStorage.getItem('jezik') == 'srp'){
             htmlContent += `
@@ -53,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
     container.innerHTML = htmlContent;
     
     document.getElementById('searchButton').addEventListener('click', function () {
+        
+
         const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
         let niz = []
         if(localStorage.getItem('jezik') == 'srp'){
@@ -103,7 +106,7 @@ function updateMenu(type) {
     let niz = []
     let temp = 0;
     for(let i = 0;i<nizJela.length;i++){
-        if(nizJela[i].tip == 'slatko'){
+        if(nizJela[i].tip == 'glavno'){
             niz[temp] = nizJela[i];
             temp++;
         }
