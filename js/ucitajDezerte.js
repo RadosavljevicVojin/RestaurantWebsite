@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var htmlContent = '';
     for (var i = 6; i < 9 && i < nizJela.length; i++) {
         var jelo = nizJela[i];
-        htmlContent += `
+        if(localStorage.getItem('jezik') == 'srp'){
+            htmlContent += `
             <div class="col-lg-6">
                 <a href="jeloPregled.html?id=${jelo.id}">
                     <div class="d-flex align-items-center">
@@ -28,6 +29,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
             </div>
         `;
+        }else{
+            htmlContent += `
+            <div class="col-lg-6">
+                <a href="jeloPregledEng.html?id=${jelo.id}">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid rounded" src="${jelo.slika}" alt="" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>${jelo.ime}</span>
+                                <span class="text-primary">$${jelo.cenamala} | $${jelo.cenavelika}</span>
+                            </h5>
+                            <small class="fst-italic">${jelo.opis}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        `;
+        }
     }
 
     // Dodaj generisani HTML u container
@@ -58,9 +77,11 @@ function updateMenu(type) {
     if (!container) return;
     let niz = []
     let temp = 0;
-    for(let i = 6;i<9;i++){
-        niz[temp] = nizJela[i];
-        temp++;
+    for(let i = 0;i<nizJela.length;i++){
+        if(nizJela[i].tip == 'slatko'){
+            niz[temp] = nizJela[i];
+            temp++;
+        }
     }
     if(type == 'naziv'){
         niz.sort((a, b) => a.ime.localeCompare(b.ime));
@@ -71,7 +92,8 @@ function updateMenu(type) {
     var htmlContent = '';
     for (var i = 0; i < niz.length; i++) {
         var jelo = niz[i];
-        htmlContent += `
+        if(localStorage.getItem('jezik') == 'srp'){
+            htmlContent += `
             <div class="col-lg-6">
                 <a href="jeloPregled.html?id=${jelo.id}">
                     <div class="d-flex align-items-center">
@@ -87,6 +109,24 @@ function updateMenu(type) {
                 </a>
             </div>
         `;
+        }else{
+            htmlContent += `
+            <div class="col-lg-6">
+                <a href="jeloPregledEng.html?id=${jelo.id}">
+                    <div class="d-flex align-items-center">
+                        <img class="flex-shrink-0 img-fluid rounded" src="${jelo.slika}" alt="" style="width: 80px;">
+                        <div class="w-100 d-flex flex-column text-start ps-4">
+                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                <span>${jelo.ime}</span>
+                                <span class="text-primary">$${jelo.cenamala} | $${jelo.cenavelika}</span>
+                            </h5>
+                            <small class="fst-italic">${jelo.opis}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        `;
+        }
     }
 
     // Dodaj generisani HTML u container

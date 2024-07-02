@@ -25,9 +25,6 @@ if (jezik === 'srp') {
                 <li class="list-group-item">Ukupna cena: ${order.vrednost} RSD</li>
             </ul>
         </div>
-        <div class="card-footer text-end">
-            <button class="btn btn-sm btn-outline-primary">Pogledaj detalje</button>
-        </div>
     `;
 } else {
     listItem.innerHTML = `
@@ -37,9 +34,6 @@ if (jezik === 'srp') {
                 ${order.items.map(item => `<li class="list-group-item">${item.jelo} - Quantity: ${item.kolicina} - Portion: ${item.porcija}</li>`).join('')}
                 <li class="list-group-item">Total price: $${order.vrednost}</li>
             </ul>
-        </div>
-        <div class="card-footer text-end">
-            <button class="btn btn-sm btn-outline-primary">View details</button>
         </div>
     `;
 }
